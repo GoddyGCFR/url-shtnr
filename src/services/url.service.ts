@@ -28,3 +28,11 @@ export const updateUrlStats = async (filter: FilterQuery<UrlI>): Promise<boolean
 
   return true
 }
+
+export const viewUrlStats = async (filter: FilterQuery<UrlI>): Promise<UrlI | null> => {
+  const url = await Url.findOne(filter)
+
+  if (!url) return null
+
+  return url
+}

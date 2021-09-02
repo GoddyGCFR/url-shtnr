@@ -27,7 +27,6 @@ interface ConnectionOptionsExtend extends ConnectOptions {
 const options: ConnectionOptionsExtend = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  // useFindAndModify: false,
 }
 const dbUri = process.env.DB_URL! as string
 connect(dbUri, options)
